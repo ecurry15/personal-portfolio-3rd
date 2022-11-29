@@ -318,7 +318,7 @@ h6 { font-size: 16px; }
 	position: absolute;
 	bottom: 2px;
 	width: 0;
-	background-color: var(--main-color);
+	background-color: var(--main-blue);
 	display: block;
 	height: 2px;
 	
@@ -1389,7 +1389,7 @@ h6 { font-size: 16px; }
 /*	09) ORIDO PORTFOLIO
 /*---------------------------------------------------*/
 
-.orido_tm_portfolio{
+#portfolio{
 	width: 100%;
 	height: auto;
 	clear: both;
@@ -1397,632 +1397,69 @@ h6 { font-size: 16px; }
 	background-color: #FFC448;
 	padding: 120px 0px 110px 0px;
 }
-.orido_tm_portfolio .portfolio_list{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-top: 65px;
-	position: relative;
-}
-.orido_tm_portfolio .portfolio_list ul{
-	margin: 0px;
-	list-style-type: none;
-	position: relative;
-}
-.orido_tm_portfolio .portfolio_list ul li{
-	margin: 0px;
-}
-.orido_tm_portfolio .portfolio_list .image{
-	position: relative;
-	overflow: hidden;
-}
-.orido_tm_portfolio .portfolio_list .image img{
-	position: relative;
-	opacity: 0;
-	min-width: 100%;
-}
-.orido_tm_portfolio .portfolio_list .image .main{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	transform: scale(1) translateZ(0);
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_portfolio .portfolio_list ul li:hover .image .main{
-	transform: scale(1.1) translateZ(0);
-}
-.orido_tm_portfolio .portfolio_list .details{
-	width: 100%;
-	float: left;
-	margin-top: 30px;
-}
-.orido_tm_portfolio .portfolio_list .category{
-	font-size: 20px;
-	display: inline-block;
-	margin-bottom: 13px;
-}
-.orido_tm_portfolio .portfolio_list .title{
-	font-size: 32px;
-	letter-spacing: -1px;
-	font-weight: 500;
-}
-.orido_tm_portfolio .portfolio_list .title span{
-	display: inline-block;
-	position: relative;
-}
-.orido_tm_portfolio .portfolio_list .title span:before{
-	position: absolute;
-	content: "";
-	width: 100%;
-	height: 1px;
-	background-color: var(--main-color);
-	left: 0px;
-	bottom: 3px;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_portfolio .portfolio_list ul li:hover .title span:before{
-	width: 0px;
-}
-.orido_tm_portfolio .prev_button,
-.orido_tm_portfolio .next_button{
-	position: absolute;
-	top: 50%;
-	transform: translateY(50%);
-	width: 80px;
-	height: 80px;
-	border-radius: 100%;
-	margin-top: -135px;
-	border: 1px solid rgba(18,0,0,.2);
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_portfolio .prev_button:hover,
-.orido_tm_portfolio .next_button:hover{
-	border: 1px solid rgba(18,0,0,.5);
-}
-.orido_tm_portfolio .prev_button{
-	left: -130px;
-}
-.orido_tm_portfolio .next_button{
-	right: -130px;
-}
-.orido_tm_portfolio .prev_button .svg,
-.orido_tm_portfolio .next_button .svg{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	width: 30px;
-	height: 30px;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_portfolio .prev_button .svg{
-	margin-left: -1px;
-}
-.orido_tm_portfolio .next_button .svg{
-	margin-left: 1px;
-}
-.orido_tm_portfolio .prev_button:hover .svg{
-	margin-left: -5px;
-}
-.orido_tm_portfolio .next_button:hover .svg{
-	margin-left: 5px;
-}
-.orido_tm_portfolio .hidden_content{
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	z-index: -11;
-}
-.orido_tm_modalbox .popup_details{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-.orido_tm_modalbox .popup_details .top_image{
-	position: relative;
-	overflow: hidden;
-	margin-bottom: 33px;
-}
-.orido_tm_modalbox .popup_details .top_image img{
-	position: relative;
-	min-width: 100%;
-	opacity: 0;
-}
-.orido_tm_modalbox .popup_details .top_image .main{
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	border-radius: 12px;
-}
-.orido_tm_modalbox .portfolio_main_title{
-	width: 100%;
-	float: left;
-	margin-bottom: 25px;
-}
-.orido_tm_modalbox .portfolio_main_title span{
-	display: inline-block;
-	font-family: var(--font-family-extra);
-}
-.orido_tm_modalbox .portfolio_main_title span a{
-	text-decoration: none;
-	color: #6f6b80;
-}
-.orido_tm_modalbox .portfolio_main_title h3{
-    font-size: 30px;
-}
-.orido_tm_modalbox .main_details{
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: flex;
-	margin-bottom: 60px;
-}
-.orido_tm_modalbox .main_details .textbox{
-	width: 70%;
-	padding-right: 40px;
-}
-.orido_tm_modalbox .main_details .textbox p{
-	margin-bottom: 15px;
-}
-.orido_tm_modalbox .main_details .textbox p:last-child{
-	margin-bottom: 0px;
-}
-.orido_tm_modalbox .main_details .detailbox{
-	width: 30%;
-	padding-left: 40px;
-}
-.orido_tm_modalbox .main_details .detailbox > ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.orido_tm_modalbox .main_details .detailbox > ul > li{
-	margin: 0px 0px 10px 0px;
-	width: 100%;
-	float: left;
-}
-.orido_tm_modalbox .main_details .detailbox > ul > li:last-child{
-	margin-bottom: 0px;
-}
-.orido_tm_modalbox .main_details .detailbox .first{
-    font-weight: 500;
-	font-size: 18px;
-	display: block;
-	color: #000;
-	font-family: var(--font-family-extra);
-}
-.orido_tm_modalbox .main_details .detailbox span{
-	font-family: var(--font-family-extra);
-}
-.orido_tm_modalbox .main_details .detailbox span a{
-	text-decoration: none;
-	color: #7d7789;
-}
-.orido_tm_modalbox .additional_images{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-.orido_tm_modalbox .additional_images ul{
-	margin: 0px 0px 0px -30px;
-	list-style-type: none;
-}
-.orido_tm_modalbox .additional_images ul li{
-	margin: 0px 0px 30px 0px;
-	float: left;
-	width: 50%;
-	padding-left: 30px;
-}
-.orido_tm_modalbox .additional_images ul li:nth-child(3n-2){
-	width: 100%;
-}
-.orido_tm_modalbox .additional_images ul li .list_inner{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	position: relative;
-}
-.orido_tm_modalbox .additional_images ul li .my_image{
-	position: relative;
-}
-.orido_tm_modalbox .additional_images ul li .my_image img{
-	opacity: 0;
-	min-width: 100%;
-}
-.orido_tm_modalbox .additional_images ul li .my_image .main{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	border-radius: 12px;
-}
-
-/*---------------------------------------------------*/
-/*	10) ORIDO TESTIMONIALS
-/*---------------------------------------------------*/
-
-.orido_tm_testimonials{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	background-color: #fafafb;
-	padding: 120px 0px;
-} 
-.orido_tm_testimonials .testimonials_in{
-	width: 100%;
-	height: auto;
-	clear: both;
-	display: flex;
-	align-items: center;
-	padding-top: 75px;
-}
-.orido_tm_testimonials img{
-	max-height: 400px;
-	max-width: 350px;
-}
-.orido_tm_testimonials .info{
-	padding-left: 70px;
-}
-.orido_tm_testimonials .text{
-	width: 100%;
-	float: left;
-	margin-bottom: 40px;
-}
-.orido_tm_testimonials .text p{
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 36px;
-	font-family: var(--font-family-extra);
-}
-.orido_tm_testimonials .details{
-	width: 100%;
-	float: left;
-	padding-left: 41px;
-}
-.orido_tm_testimonials .details .name{
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 7px;
-}
-.orido_tm_testimonials .details .name span{
-	position: relative;
-	display: inline-block;
-}
-.orido_tm_testimonials .details .name span:before{
-	position: absolute;
-	content: "";
-	width: 24px;
-	height: 1px;
-	background-color: var(--main-color);
-	top: 50%;
-	transform: translateY(-50%);
-	left: -41px;
-}
-.orido_tm_testimonials .details .job{
-	font-size: 19px;
-	color: #707070;
-}
-
-/*---------------------------------------------------*/
-/*	11) ORIDO NEWS
-/*---------------------------------------------------*/
-
-.orido_tm_news{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 120px 0px 0px 0px;
-}
-.orido_tm_news .news_list{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-top: 100px;
-}
-.orido_tm_news .news_list > ul{
-	margin: 0px 0px 0px -30px;
-	list-style-type: none;
-}
-.orido_tm_news .news_list > ul > li{
-	margin: 0px 0px 30px 0px;
-	float: left;
-	padding-left: 30px;
-	width: 50%;
-}
-.orido_tm_news .news_list > ul > li .list_inner{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
+.portfolio__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	max-width: 1200px;
+	gap: 16px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.col {
+	background: linear-gradient(145deg, #1c67f3, #2a50b6);
+	margin-bottom: 30px;
+	height: 500px;
+	border-radius: 10px;
 	position: relative;
 	display: flex;
 	align-items: center;
-	background-color: rgba(255,246,217,.4);
-	padding: 20px 20px 20px 30px;
+	justify-content: center;
 }
-.orido_tm_news .news_list > ul > li .left{
-	width: 50%;
-	position: relative;
-	z-index: 1;
-	padding-right: 10px;
-}
-.orido_tm_news .metabox{
-	width: 100%;
-	float: left;
-	margin-bottom: 10px;
-}
-.orido_tm_news .metabox ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.orido_tm_news .metabox ul li{
-	margin: 0px 15px 0px 0px;
-	display: inline-block;
-}
-.orido_tm_news .metabox ul li:last-child{
-	margin-right: 0px;
-}
-.orido_tm_news .metabox span{
-	font-size: 16px;
-	position: relative;
-	padding-left: 10px;
-}
-.orido_tm_news .metabox span:before{
+.col > h3 {
 	position: absolute;
-	content: "";
-	width: 6px;
-	height: 6px;
-	border-radius: 100%;
-	background-color: #F26440;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 0px;
+	bottom: -25px;
+	font-size: 1.2rem;
+	left: 5px;
+	font-family: monospace;
 }
-.orido_tm_news .metabox a{
-	color: var(--main-color);
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
+.portfolio__img-container {
+	width: 95%;
+	height: 95%;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 1px 6px rgb(0, 0, 0);
 }
-.orido_tm_news .metabox a:hover{
-	color: #F26440;
+@media screen and (max-width: 1280px) {
+	.portfolio__grid {
+		max-width: 90vw;
+	}
+	.col {
+		height: 38vw;
+	}
 }
-.orido_tm_news .title{
-	width: 100%;
-	float: left;
-	margin-bottom: 43px;
+@media screen and (max-width: 1044px) {
+	.portfolio__grid {
+		max-width: 86vw;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.col {
+		height: 47vw;
+	}
 }
-.orido_tm_news .title h3{
-	line-height: .9;
-}
-.orido_tm_news .title a{
-	font-size: 20px;
-	font-weight: 700;
-	color: var(--main-color);
-	background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 1px;
-    transition: background-size .5s;
-}
-.orido_tm_news .title a:hover{
-	background-size: 100% 1px;
-}
-.orido_tm_news .news_list > ul > li .right{
-	width: 50%;
-	position: relative;
-	z-index: 1;
-	overflow: hidden;
-}
-.orido_tm_news .news_list > ul > li .right img{
-	position: relative;
-	opacity: 0;
-	min-width: 100%;
-}
-.orido_tm_news .news_list > ul > li .right .main{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	transform: scale(1) translateZ(0);
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_news .news_list > ul > li .right:hover .main{
-	transform: scale(1.1) translateZ(0);
-}
-.orido_tm_news .shape{
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	bottom: 0px;
-}
-.orido_tm_news .shape .svg{
-	width: 100%;
-	height: 100%;
-}
-.orido_tm_news .news_hidden_details{
-	display: none;
-	opacity: 0;
-	visibility: hidden;
-	position: absolute;
-	z-index: -11;
-}
-.orido_tm_modalbox .news_popup_informations{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-}
-.orido_tm_modalbox .news_popup_informations .image{
-	position: relative;
-	margin-bottom: 32px;
-}
-.orido_tm_modalbox .news_popup_informations .image img{
-	position: relative;
-	opacity: 0;
-	min-width: 100%;
-}
-.orido_tm_modalbox .news_popup_informations .image .main{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	border-radius: 12px;
-}
-.orido_tm_modalbox .news_popup_informations .text{
-	width: 100%;
-	float: left;
-}
-.orido_tm_modalbox .news_popup_informations .text p{
-	margin-bottom: 15px;
-}
-.orido_tm_modalbox .news_popup_informations .text p:last-child{
-	margin-bottom: 0px;
-}
-.orido_tm_modalbox .metabox{
-	width: 100%;
-	float: left;
-	margin-bottom: 7px;
-}
-.orido_tm_modalbox .metabox ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.orido_tm_modalbox .metabox ul li{
-	margin: 0px 15px 0px 0px;
-	display: inline-block;
-}
-.orido_tm_modalbox .metabox ul li:last-child{
-	margin-right: 0px;
-}
-.orido_tm_modalbox .metabox span{
-	font-size: 16px;
-	position: relative;
-	padding-left: 10px;
-}
-.orido_tm_modalbox .metabox span:before{
-	position: absolute;
-	content: "";
-	width: 6px;
-	height: 6px;
-	border-radius: 100%;
-	background-color: #F26440;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 0px;
-}
-.orido_tm_modalbox .metabox a{
-	color: var(--main-color);
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_modalbox .metabox a:hover{
-	color: #F26440;
-}
-.orido_tm_modalbox .news_popup_informations .title h3{
-	font-size: 30px;
-	margin-bottom: 25px;
+@media screen and (max-width: 768px) {
+	.portfolio__grid {
+		max-width: 92vw;
+		display: block;
+		padding-bottom: 16px;
+	}
+	.col {
+		height: 100vw;
+		max-height: 640px;
+		margin-bottom: 50px;
+	}
 }
 
-/*---------------------------------------------------*/
-/*	12) ORIDO PARTNERS
-/*---------------------------------------------------*/
 
-.orido_tm_partners{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	padding: 40px 0px 110px 0px;
-}
-.orido_tm_partners .partners_list{
-	width: 100%;
-	height: auto;
-	clear: both;
-	float: left;
-	margin-top: 35px;
-	position: relative;
-}
-.orido_tm_partners .partners_list ul{
-	margin: 0px;
-	list-style-type: none;
-}
-.orido_tm_partners .partners_list ul li{
-	margin: 0px;
-}
-.orido_tm_partners .partners_list ul li img{
-	opacity: .5;
-	
-	-webkit-transition: all .3s ease;
-	   -moz-transition: all .3s ease;
-	    -ms-transition: all .3s ease;
-	     -o-transition: all .3s ease;
-	        transition: all .3s ease;
-}
-.orido_tm_partners .partners_list ul li:hover img{
-	opacity: 1;
-}
 
 /*---------------------------------------------------*/
 /*	13) ORIDO CONTACT

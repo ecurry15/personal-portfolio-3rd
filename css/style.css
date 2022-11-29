@@ -60,12 +60,12 @@ body{
 
 svg{
 	fill: currentcolor;
-	width: 15px;
-	height: 15px;
+	width: 18px;
+	height: 18px;
 }
 img.svg{
-	width: 15px;
-	height: 15px;
+	width: 18px;
+	height: 18px;
 }
 
 body::-webkit-scrollbar {
@@ -145,123 +145,6 @@ h6 { font-size: 16px; }
 			box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-#preloader{
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 99999;
-    display: flex;
-}
-#preloader:before,
-#preloader:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    z-index: -1;
-    background-color: #000;
-    -webkit-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-#preloader:after{
-    left: auto;
-    right: 0;
-}
-#preloader .loader_line{
-    margin: auto;
-    width: 1px;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all 0.8s ease 0s;
-    -o-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s;
-}
-.loader_line:before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 1px;
-    height: 0%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    background-color: #fff;
-    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
-    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
-    animation: lineheight 1000ms ease-in-out 0s forwards;
-}
-.loader_line:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    background-color: #999999;
-    -webkit-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
-    -webkit-animation: lineround 1200ms linear 0s infinite;
-    -o-animation: lineround 1200ms linear 0s infinite;
-    animation: lineround 1200ms linear 0s infinite;
-    animation-delay: 2000ms;
-}
-
-@keyframes lineheight{
-    0%{
-        height: 0%;
-    }
-    100%{
-        height: 100%;
-    }
-}
-
-@keyframes lineround{
-    0%{
-        -webkit-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    100%{
-        -webkit-transform: translateY(200%);
-        -ms-transform: translateY(200%);
-        -o-transform: translateY(200%);
-        transform: translateY(200%);
-    }
-}
-
-/*hiding all*/
-.preloaded .loader_line:after{
-    opacity: 0;
-}
-.preloaded  .loader_line{
-    opacity: 0;
-    height: 100%!important;
-}
-.preloaded:before,
-.preloaded:after{
-    -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-    -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
-    animation: preloadedzero 300ms ease-in-out 500ms forwards;
-}
-@keyframes preloadedzero{
-    0%{
-        width: 50%;
-    }
-    100%{
-        width: 0%;
-    }
-}
 .orido_tm_section{
 	width: 100%;
 	height: auto;
@@ -488,14 +371,15 @@ h6 { font-size: 16px; }
 .orido_tm_hero .short .job{
 	display: inline-block;
 	position: relative;
-	font-size: 24px;
+	font-size: 25px;
 	padding-left: 97px;
+	color: var(--main-blue);
 }
 .orido_tm_hero .short .job:before{
 	position: absolute;
 	content: "";
 	width: 80px;
-	height: 1px;
+	height: 2px;
 	background-color: var(--main-color);
 	left: 0px;
 	top: 13px;
@@ -525,7 +409,7 @@ h6 { font-size: 16px; }
 	color: #FDFDFD;
 	font-family: var(--font-family-extra);
 	font-weight: 700;
-	background-color: #6244C5;
+	background-color: var(--main-blue);
 	border-radius: 16px;
 	padding: 22px 40px 23px 40px;
 	display: inline-block;
@@ -552,7 +436,7 @@ h6 { font-size: 16px; }
 	        transition: all .3s ease;
 }
 .orido_tm_boxed_button a:hover{
-	background-color: var(--main-color);
+	background-color: #1463f3;
 }
 .orido_tm_simple_button{
 	width: 100%;
@@ -634,23 +518,27 @@ h6 { font-size: 16px; }
 	        transition: all .3s ease;
 }
 .orido_tm_follow ul li a:hover{
-	background-color: var(--main-color);
+	background-color: var(--main-blue);
 }
+.orido_tm_follow ul li a:hover #hero__svg{
+	filter: invert(100%);
+}
+#contact__svg {
+	filter: invert(100%);
+}
+
 .orido_tm_follow ul li .svg{
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	
 	-webkit-transition: all .3s ease;
 	   -moz-transition: all .3s ease;
 	    -ms-transition: all .3s ease;
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.orido_tm_follow ul li a:hover .svg path{
-	fill:#fff;
-}
+
 .orido_tm_follow span{
 	font-size: 16px;
 	font-weight: 500;
@@ -734,7 +622,7 @@ h6 { font-size: 16px; }
 	height: auto;
 	clear: both;
 	float: left;
-	background-color: #6244C5;
+	background-color: var(--main-blue);
 	padding: 180px 0px 120px 0px;
 	margin-bottom: 120px;
 }
@@ -765,7 +653,7 @@ h6 { font-size: 16px; }
 	position: relative;
 	margin-right: -30px;
 	margin-top: -95px;
-	color: #6244C5;
+	color: var(--main-blue);
 	line-height: 1;
 }
 .orido_tm_about .experience{
@@ -776,7 +664,7 @@ h6 { font-size: 16px; }
 }
 .orido_tm_about .name{
 	font-size: 80px;
-	color: #6244C5;
+	color: var(--main-blue);
 	font-weight: 700;
 	letter-spacing: -4px;
 	line-height: 1;
@@ -1073,7 +961,7 @@ h6 { font-size: 16px; }
 	margin-bottom: 25px;
 }
 .orido_tm_informations .timelinebox .time .year{
-	color: #6244C5;
+	color: var(--main-blue);
 	display: block;
 	margin-bottom: 2px;
 }
@@ -2241,7 +2129,7 @@ h6 { font-size: 16px; }
 	background-color: rgba(255, 255, 255, 0.15);
 }
 .orido_tm_contact .orido_tm_follow ul li a:hover{
-	background-color: #fff;
+	background-color: var(--main-blue);
 }
 .orido_tm_contact .orido_tm_follow ul li .svg path{
 	fill: #fff;
@@ -2330,7 +2218,7 @@ h6 { font-size: 16px; }
   width: 6px;
   height: 6px;
   z-index: 100;
-  background-color: #6244C5;
+  background-color: var(--main-blue);
   -webkit-transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
   transition: width .3s ease-in-out, height .3s ease-in-out, margin .3s ease-in-out, opacity .3s ease-in-out;
 }
@@ -2339,7 +2227,7 @@ h6 { font-size: 16px; }
   margin-top: -40px;
   width: 80px;
   height: 80px;
-  background-color: #6244C5;
+  background-color: var(--main-blue);
   opacity: .3;
 }
 .cursor-outer {
@@ -2347,7 +2235,7 @@ h6 { font-size: 16px; }
   margin-top: -15px;
   width: 30px;
   height: 30px;
-  border: 2px solid #6244C5;
+  border: 2px solid var(--main-blue);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   z-index: 100;
@@ -2374,7 +2262,7 @@ h6 { font-size: 16px; }
     width: 1px;
 	bottom: 25px;
     right: -25px;
-    background-color: rgba(0,0,0,.08);
+    background-color: #1463f3;
     z-index: 10;
 	
 	-webkit-transition: all .3s ease;
@@ -2401,6 +2289,7 @@ h6 { font-size: 16px; }
     text-transform: uppercase;
     transform-origin: left;
     white-space: nowrap;
+	color: #1463f3;
 }
 .progressbar a{
 	text-decoration: none;
@@ -2420,7 +2309,7 @@ h6 { font-size: 16px; }
 	.orido_tm_header .logo img{max-width: 145px;max-height: 80px;}
 	.orido_tm_header .button a{padding: 9px 30px 10px 30px;}
 	.orido_tm_hero .short{margin-bottom: 25px;}
-	.orido_tm_hero .short h3{font-size: 65px;margin-bottom: 7px;}
+	.orido_tm_hero .short h3{font-size: 58px;margin-bottom: 7px;}
 	.orido_tm_hero .short .job{font-size: 20px;padding-left: 87px;}
 	.orido_tm_hero .short .job:before{width: 70px;}
 	.orido_tm_hero .short h3 .svg{width: 38px;height: 38px;}

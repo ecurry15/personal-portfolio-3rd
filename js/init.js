@@ -764,3 +764,24 @@ function orido_tm_about_tabs(){
 		return false;
 	});
 }
+
+function copyText(htmlElement) {
+if (!htmlElement) {
+	return
+}
+let elementText = htmlElement.innerText;
+let inputElement = document.createElement('input');
+inputElement.setAttribute('value', elementText);
+document.body.appendChild(inputElement);
+inputElement.select();
+document.execCommand('copy');
+inputElement.parentNode.removeChild(inputElement);
+document.querySelector('.contact__email-copied-text').style.display = 'block';
+setTimeout(() => {
+	document.querySelector('.contact__email-copied-text').style.display = 'none';
+  }, "2500")
+}
+
+document.querySelector(".contact__email").onclick = function () {
+	copyText(document.querySelector('#contact__email'));
+}

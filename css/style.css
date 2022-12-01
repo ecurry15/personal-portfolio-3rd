@@ -336,14 +336,17 @@ h6 { font-size: 16px; }
 .orido_tm_hero{
 	width: 100%;
 	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
 	float: left;
 }
 .orido_tm_hero .container{
 	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
 }
 .orido_tm_hero .content{
 	min-height: 100vh;
+	min-height: calc(var(--vh, 1vh) * 100);
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -1208,6 +1211,7 @@ h6 { font-size: 16px; }
 	left: 0px;
 	right: 0px;
 	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
 	z-index: 20;
 	background-color: rgba(0,0,0,.9);
 	opacity: 0;
@@ -2093,10 +2097,12 @@ h6 { font-size: 16px; }
 	}
 	.orido_tm_hero .container {
 		min-height: 70vh;
+		min-height: calc(var(--vh, 1vh) * 70);
 		padding-top: 10px;
 	}
 	.orido_tm_hero .content {
 		min-height: 40vh;
+		min-height: calc(var(--vh, 1vh) * 40);
 		position: relative;
 		display: flex;
 		align-items: center;

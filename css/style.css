@@ -2104,7 +2104,7 @@ h6 { font-size: 16px; }
 	}
 	.orido_tm_hero .orido_tm_follow {
 		position: relative;
-		padding-top: 140px;
+		margin-top: 140px;
 	}
 }
 @media (max-width: 420px) {
